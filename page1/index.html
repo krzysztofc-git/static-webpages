@@ -1,0 +1,80 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Page 1</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cat%20face/3D/cat_face_3d.png" />
+    </head>
+    <body>
+      <main>
+        <h1 id="title" >Cat Sitter Survey Form</h1>
+        <p id="description">How was my cat behaving today? Please,&nbsp;fill&nbsp;up&nbsp;the&nbsp;form</p>
+        <div id="to-fill-info-combined">
+          <p class="required to-fill-info">Required to fill</p>
+          <p class="optional to-fill-info">Optional to fill</p>
+        </div>
+        <form id="survey-form">
+          <fieldset>
+            <legend>Basic info:</legend>
+            <label id="name-label" for="name">
+              Name:<br> <input id="name" type="text" name="name" placeholder="Enter your name here..." required>
+            </label><br>
+            <label id="email-label" for="email">
+              Email:<br> <input id="email" type="email" name="email" placeholder="Enter your email here..." required>
+            </label><br>
+            <label id="number-label" for="number">
+              Phone&nbsp;number:<br> <input id="number" type="number" name="number" min="1000000000" max="9999999999" placeholder="Enter your phone number here..." required>
+            </label><br>
+            <label id="dropdown" for="cat">
+              Cat:<br> <select id="cat" name="cat" required>
+                <option disabled selected value>Select the cat from the list...</option>
+                <option value="lory">Lory</option>
+                <option value="sussie">Sussie</option>
+                <option value="katy-purry">Katy Purry</option>
+                <option value="Lory">John</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Type of food used:</legend>
+            <input id="basic" type="radio" name="food" value="basic">
+            <label for="basic">Basic</label><br>
+            <input id="standard" type="radio" name="food" value="standard" checked>
+            <label for="standard">Standard</label><br>
+            <input id="premium" type="radio" name="food" value="premium">
+            <label for="premium">Premium</label><br>
+            <input id="diet" type="radio" name="food" value="diet">
+            <label for="diet">Diet</label>
+          </fieldset>
+          <fieldset class="optional">
+            <legend>Games played with the cat:</legend>
+            <input id="fetch" type="checkbox" name="games" value="fetch">
+            <label for="fetch">Fetch</label><br>
+            <input id="paper" type="checkbox" name="games" value="paper">
+            <label for="paper">Crumpled Paper</label><br>
+            <input id="feather" type="checkbox" name="games" value="feather">
+            <label for="feather">Feather and String</label><br>
+            <input id="box" type="checkbox" name="games" value="box">
+            <label for="box">Cardboard Box</label>
+          </fieldset>
+          <fieldset>
+            <legend>Behavior of the cat:</legend>
+            <input id="lazy" type="radio" name="behaviour" value="lazy" checked>
+            <label for="lazy">Lazy</label><br>
+            <input id="playful" type="radio" name="behaviour" value="playful">
+            <label for="playful">Playful</label><br>
+            <input id="nervous" type="radio" name="behaviour" value="nervous">
+            <label for="nervous">Nervous</label><br>
+            <input id="calm" type="radio" name="behaviour" value="calm">
+            <label for="calm">Calm</label>
+          </fieldset>
+          <fieldset class="optional">
+            <legend>Additional comment:</legend>
+            <textarea id="comment" class="optional" name="comment" placeholder="Enter your comment here..." rows="4"></textarea>
+          </fieldset>
+          <button id="submit" type="submit">Submit</button>
+        </form>
+        </main>
+    </body>
+</html>
