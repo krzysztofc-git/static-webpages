@@ -6,4 +6,7 @@ See the working project by vising `Environments` section (GitHub Pages :octocat:
 ## Pages included in this repository
 Previews located in `/images` folder
 
+### `/index.html`
+![](images/page0.png)
+### `/page1/index.html`
 ![](images/page1.png)
