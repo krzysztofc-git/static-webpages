@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300&family=Roboto:wght@300&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  background-color: #89929b;
+}
+
+img {
+  object-fit: cover;
+}
+
+#welcome-section {
+  height: 100vh;
+  background-color: #161b22;
+  /*margin-top: 70px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#welcome-section h1 {
+  font-size: 5em;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
+}
+
+#welcome-section p {
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 5px;
+}
+
+#navbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: #21262d;
+  box-shadow: 0px 0px 20px rgba(0,0,0,30%);
+  font-family: 'Abril Fatface', cursive;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+#navbar:hover {
+  box-shadow: 0px 0px 0px rgba(0,0,0,100%);
+}
+
+#logo-space{
+  width:50px;
+  height:20px;
+}
+
+#navbar ul li svg {
+  position: absolute;
+  top: 10px;
+}
+
+#navbar ul {
+  margin: 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3em;
+  padding: 20px 0px 20px 0px;
+}
+
+#navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 20px 20px 20px;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
+}
+
+.project-tile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 150px;
+  width: 200px;
+  margin: 20px 10px 0px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,30%);
+  transition: box-shadow 0.2s;
+}
+
+.project-tile:last-child {
+  margin: 20px 10px 20px 10px;
+}
+
+.project-tile:hover {
+  box-shadow: 0px 0px 0px rgba(0,0,0,100%);
+}
+
+.project-tile h2 {
+  z-index: 3;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 200;
+  color: #21262d;
+  margin: 0px;
+  margin-bottom: 12px;
+}
+
+.project-tile img {
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.project-tile::before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, transparent 0%, #fff 80%);
+  z-index: 2;
+}
+
+.project-tile a {
+  position: absolute;
+  z-index: 4;
+  height: 150px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+#profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #21262d;
+  color: #fff;
+  width: 100%;
+  font-size: 1em;
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  height: 70px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,30%);
+  transition: box-shadow 0.2s;
+}
+
+#profile-link:hover {
+  box-shadow: 0px 0px 0px rgba(0,0,0,100%);
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+.project-tile:has(.disabled-link) {
+  box-shadow: none;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+.project-tile:has(.disabled-link) img {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #welcome-section h1 {
+    font-size: 3em;
+  }
+  
+  #welcome-section p {
+    font-size: 1.5em;
+  }
+  
+  #navbar ul li {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 456px) {
+  .project-tile {
+    height: calc(150px * 1.5);
+    width: calc(200px * 1.5);
+  }
+
+  .project-tile img {
+    height: calc(150px * 1.5);
+    width: calc(200px * 1.5);
+  }
+  
+  .project-tile::before {
+    height: calc(150px * 1.5);
+    width: calc(200px * 1.5);
+  }
+  
+  .project-tile a {
+    height: calc(150px * 1.5);
+    width: calc(200px * 1.5);
+  }
+  
+  #profile-link {
+    font-size: 1em;
+  }
+}
