@@ -1,0 +1,144 @@
+:root {
+  --required-color: #ffd95b;
+  --optional-color: #d7ccc8;
+  --gray-out: rgba(0,0,0,75%);
+}
+
+main {
+  max-width: 750px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+#survey-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-content: flex-start;
+  margin-bottom: 90px;
+  justify-content: center;
+  flex-items: stretch;
+}
+
+body {
+  background: linear-gradient(to bottom, transparent, #ffa726, #ffa726), url("https://cdn.pixabay.com/photo/2019/06/09/12/56/cat-4262034_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffa726;
+  background-position: 50% 100%;
+}
+
+::placeholder {
+  color: var(--gray-out);
+}
+
+.to-fill-info {
+  color: #000 !important;
+  display: inline-block;
+  font-size: 0.9rem !important;
+  margin-left: 13px;
+  text-align: center;
+}
+
+#to-fill-info-combined {
+  width: 250px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+legend, button, .to-fill-info {
+  background-color: #c77800;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 3px 6px;
+}
+
+button {
+  background-color: var(--optional-color);
+  color: black;
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  height: 50px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,20%);
+  transition: box-shadow 0.2s;
+}
+
+button:hover{
+  box-shadow: 0px 10px 30px rgba(0,0,0,8%);
+  cursor: pointer;
+}
+
+fieldset, input, select, .required {
+  background-color: var(--required-color);
+}
+
+fieldset, button, legend, .to-fill-info {
+  border-radius: 15px;
+  border-style: none;
+  margin-top: 10px;
+  flex-grow: 1;
+}
+
+.optional {
+  background-color: var(--optional-color);
+}
+
+[type='text'], [type='email'], [type='number'], select {
+  border-style: none;
+  width: 250px;
+}
+
+textarea {
+  border-style: none;
+  resize: none;
+  width: 100%;
+}
+
+select,
+select option {
+  color: #000000;
+  appearance: none;
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #999999;
+  color: var(--gray-out);
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+#title {
+  font-family: sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#description {
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+input, select, textarea {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+@media (min-width: 1152px) {
+  #title, #description {
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(0,0,0,60%);
+  }
+}
