@@ -69,44 +69,47 @@ h1 {
 
 #clock {
   border: 0px !important;
-  width: 90% !important;
-  height: 90% !important;;
+  width: 30% !important;
+  height: 30% !important;;
   margin: 5%;
   text-align: center;
   font-size: 5em;
   background-color: #9ec461 !important;
   color: #000000da;
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
 
-#container div:nth-child(1):hover ~ *:has(#clock) #clock {
+#container div:nth-child(1):hover ~ #clock {
   -webkit-transform: perspective(600) rotateY(-25deg) rotateX(25deg);
 }
 
-#container div:nth-child(2):hover ~ *:has(#clock) #clock {
+#container div:nth-child(2):hover ~ #clock {
   -webkit-transform: perspective(600) rotateX(25deg);
 }
 
-#container div:nth-child(3):hover ~ *:has(#clock) #clock {
+#container div:nth-child(3):hover ~ #clock {
   -webkit-transform: perspective(600) rotateY(25deg) rotateX(25deg);
 }
 
-#container div:nth-child(4):hover ~ *:has(#clock) #clock {
+#container div:nth-child(4):hover ~ #clock {
   -webkit-transform: perspective(600) rotateY(-25deg);
 }
 
-#container div:nth-child(6):hover ~ *:has(#clock) #clock {
+#container div:nth-child(6):hover ~ #clock{
   -webkit-transform: perspective(600) rotateY(25deg);
   background-color: #9ec461 !important;
 }
 
-#container div:nth-child(7):hover ~ *:has(#clock) #clock {
-  -webkit-transform: perspective(600) rotateX(25deg);
+#container div:nth-child(7):hover ~ #clock {
+  -webkit-transform: perspective(600) rotateY(-25deg) rotateX(-25deg);
 }
 
-#container div:nth-child(8):hover ~ *:has(#clock) #clock {
-  -webkit-transform: perspective(600) rotateY(-25deg) rotateX(25deg);
+#container div:nth-child(8):hover ~ #clock {
+  -webkit-transform: perspective(600) rotateX(-25deg) ;
 }
 
-#container div:nth-child(9):hover ~ *:has(#clock) #clock {
-  -webkit-transform: perspective(600) rotateX(25deg);
+#container div:nth-child(9):hover ~ #clock {
+  -webkit-transform: perspective(600) rotateY(25deg) rotateX(-25deg);
 }
